@@ -1,0 +1,62 @@
+# Scala
+*.class
+*.tasty
+hs_err_pid*
+
+# Gold
+goldio_package/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+jspm_packages/
+web_modules/
+vendor/
+
+# Optional npm cache directory
+.npm
+
+# Output directories
+build/
+dist/
+out/
+target/
+.next/
+.nuxt/
+
+# IDEs and text editors
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+
+# Operating system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Local environment files (Sensitive Info)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
