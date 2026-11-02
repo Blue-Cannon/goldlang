@@ -1,1 +1,13 @@
+# Gold Programming Language - Make 【entity-GitHub¦canonical_name=GitHub】 know Gold
+# Repo: goldlang | Files: .gld | VM: Carve | Package: gold.io.toml
+
+# Tell 【entity-GitHub¦canonical_name=GitHub】 that .gld is Gold code
 *.gld linguist-language=Gold
+*.gld linguist-detectable=true
+*.gld linguist-documentation=false
+
+# Don't count these as code for stats
+goldio_package/ linguist-vendored
+gld_modules/ linguist-vendored
+dist/ linguist-vendored
+.vscode/ linguist-vendored
