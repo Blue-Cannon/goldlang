@@ -39,7 +39,7 @@ main = "main.gld"
 [dependencies]
 
 [registry]
-url = "https://gold.io"
+url = "https://github.com/Blue-Cannon/goldlang/tree/main/goldio_package"
 local_path = "goldio_package/"
 """
     val w = new java.io.PrintWriter(file); w.write(content); w.close()
