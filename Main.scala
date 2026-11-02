@@ -22,16 +22,24 @@ case class Program(statements: List[Statement])
 sealed trait Statement
 case class PrintLine(msg: String) extends Statement
 case class End() extends Statement
+case class VarDecl(name: String, expr: String) extends Statement
+case class Ask(name: String) extends Statement
+case class IfEnter(name: String) extends Statement
+case class Print(expr: String) extends Statement
+case class EndIf() extends Statement
 
 object GoldParser {
   def parse(code: String): Program = {
     var stmts: List[Statement] = List()
     for (line <- code.split("\n").map(_.trim).filter(_.nonEmpty)) {
-      if (line.startsWith("printline(")) {
+      if (line.isEmpty) {
+      }
+        else if (line.startsWith("printline(")) {
         val s = line.indexOf("\"")
         val e = line.lastIndexOf("\"")
         if (s != -1 && e > s) stmts = stmts :+ PrintLine(line.substring(s+1, e))
-      } else if (line == "end") {
+      } else if (line.contains("=") && !line.startsWith("if")) {}
+        else if (line == "end") {
         stmts = stmts :+ End()
       }
     }
