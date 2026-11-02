@@ -51,7 +51,7 @@ object GoldParser {
           if (s != -1 && e > s)
           stmts = stmts :+ Ask(line.substring(s+1, e).trim) 
       } else if (line.startsWith("if") && line.contains("enter()")) {
-          val varName = line.replace("if", "").replace("enter()", "").(":", "").trim
+          val varName = line.replace("if", "").replace("enter()", "").replace(":", "").trim
           stmts = stmts :+ IfEnter(varName)
       } else if (line == "end.if") {
         stmts = stmts :+ EndIf()
