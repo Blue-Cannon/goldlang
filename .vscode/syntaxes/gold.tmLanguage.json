@@ -1,0 +1,18 @@
+{
+  "name": "Gold",
+  "scopeName": "source.gold",
+  "fileTypes": ["gld"],
+  "patterns": [
+    {"include": "#keywords"},
+    {"include": "#functions"},
+    {"include": "#variables"}
+  ],
+  "repository": {
+    "keywords": {
+      "match": "\\b(end\\.if|if|enter\\(\\)|ask|end)\\b"
+    },
+    "functions": {
+      "match": "\\b(printline)\\b(?=\\s*\\()"
+    }
+  }
+}
